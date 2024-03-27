@@ -143,7 +143,7 @@ nav {
 
 .owl-carousel .slide-content h1 {
   font-size: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .owl-carousel .slide-content p {
@@ -155,6 +155,14 @@ nav {
   cursor: pointer;
   font-size: 30px; /* 아이콘 크기 조정 */
   color: #007bff; /* 푸른색 계열로 조정 */
+}
+
+.owl-carousel .slide-content h1,
+.owl-carousel .slide-content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; /* 혹은 적절한 최대 너비 */
 }
 
 @media screen and (max-width: 768px) {
@@ -176,7 +184,8 @@ nav {
 
   .owl-carousel .slide-content p {
     font-size: 18px;
-}
+    margin-top: 0;
+  }
 
 @media screen and (max-width: 480px) {
   .owl-carousel .slide-content h1 {
