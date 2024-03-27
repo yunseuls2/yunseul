@@ -397,20 +397,20 @@ footer {
 /* 화면 크기에 따른 글씨 크기 조정 */
 @media screen and (max-width: 768px) {
   #hero .owl-carousel .slide-content h1 {
-    font-size: 26px; /* 화면이 768px 이하일 때의 글씨 크기 */
+    font-size: 32px; /* 화면이 768px 이하일 때의 글씨 크기 */
   }
 
   #hero .owl-carousel .slide-content p {
-    font-size: 14px; /* 화면이 768px 이하일 때의 글씨 크기 */
+    font-size: 18px; /* 화면이 768px 이하일 때의 글씨 크기 */
   }
 }
 
 @media screen and (max-width: 480px) {
   #hero .owl-carousel .slide-content h1 {
-    font-size: 21px; /* 화면이 480px 이하일 때의 글씨 크기 */
+    font-size: 32px; /* 화면이 480px 이하일 때의 글씨 크기 */
   }
 
   #hero .owl-carousel .slide-content p {
-    font-size: 11px; /* 화면이 480px 이하일 때의 글씨 크기 */
+    font-size: 18px; /* 화면이 480px 이하일 때의 글씨 크기 */
   }
 }
