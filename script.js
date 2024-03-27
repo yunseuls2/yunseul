@@ -56,3 +56,16 @@ $(document).ready(function(){
   });
 });
 
+// 팝업 링크 기능 추가
+function openPopup(event) {
+  event.preventDefault(); // 기본 링크 동작을 방지
+  var url = event.currentTarget.href; // 현재 링크의 URL을 가져옴
+  window.open(url, 'popupWindow', 'width=600,height=400,scrollbars=yes'); // 새 창으로 열기
+}
+
+// 팝업 링크 이벤트 리스너 추가
+const popupLinks = document.querySelectorAll('.popup-link'); // 팝업 링크 클래스
+
+popupLinks.forEach(link => {
+  link.addEventListener('click', openPopup);
+});
