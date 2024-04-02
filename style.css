@@ -141,9 +141,10 @@ nav {
   white-space: pre-wrap;
 }
 
-.owl-carousel .slide-content h1 {
-  font-size: 48px;
+.owl-carousel .slide-content .custom-h1 {
+  font-size: 48px; /* 원래 H1의 글꼴 크기 */
   margin-bottom: 5px;
+  font-weight: bold; /* H1의 기본 굵기 */
 }
 
 .owl-carousel .slide-content p {
