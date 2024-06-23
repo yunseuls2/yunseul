@@ -1,249 +1,198 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5H95B8TX');</script>
-  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="데이터 기술 기업 윤슬,윤슬,데이터 기업,온라인 쇼핑몰,스마트스토어,쇼핑몰,업무효율,마케팅,SNS마케팅,디지털마케팅,온라인마케팅,업무 효율화,대행,광고대행,쇼핑몰대행,스토어대행,스마트스토어대행,카페24대행,카페24,쇼핑몰제작,인스타광고,인스타그램광고,마케팅대행사,마케팅회사">
-  <meta name="description" content="데이터 기술 기업 윤슬은 데이터의 전문성을 통해 비즈니스 혁신을 주도하고 고객과의 동반 성장을 추구합니다">
   <title>데이터 기술 기업 윤슬</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap">
   <link rel="icon" href="img/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H95B8TX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="#">윤슬</a>
-      </div>
-      <div class="menu-icon">☰</div>
-      <ul class="nav-links">
-        <li><a href="#products">상품 정보</a></li>
-        <li><a href="#about">회사 소개</a></li>
-        <li><a href="#faq">자주 묻는 질문</a></li>
-        <li><a href="#contact">찾아오시는 길</a></li>
-        <li><a href="https://blog.naver.com/yunseuldata" target="_blank" class="popup-link">블로그</a></li>
+  <header class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo2.png" alt="윤슬 로고" class="logo-img">
+        <span class="ms-2 logo-text">윤슬</span>
+      </a>
+      <ul class="nav d-none d-md-flex">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">메뉴1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">메뉴2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">메뉴3</a>
+        </li>
       </ul>
-    </nav>
+      <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <script>
-      (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
-    
-      ChannelIO('boot', {
-        "pluginKey": "323bceb8-04e5-4966-b662-6de4ec0ffa49"
-      });
-    </script>
-    <section id="hero">
-      <div class="owl-carousel owl-theme">
-        <div class="slide">
-          <img src="img/slide01.jpg" alt="Slide 1">
-          <div class="slide-content">
-            <h1>데이터 기술 기업 윤슬</h1>
-            <p>데이터로 비즈니스 성장의 미래를 그립니다</p>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">메뉴</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">메뉴1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">메뉴2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">메뉴3</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-light mt-4" data-bs-dismiss="offcanvas">닫기</button>
+    </div>
+  </div>
+  
+  <section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold">데이터 기술 기업 윤슬</h1>
+      <p class="hero-subtitle">데이터로 비즈니스의 성장을 그립니다</p>
+      <button class="btn btn-outline-light" onclick="scrollToAbout()">더 알아보기</button>
+    </div>
+  </section>
+  
+  <section id="about" class="py-5 text-white">
+    <div class="container">
+      <h2 class="text-center mb-4">회사 소개</h2>
+      <p class="text-center mb-5">윤슬은 데이터 기술을 기반으로 혁신적인 솔루션을 제공하는 기업입니다.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="about-box p-3">
+            <h3 class="text-center">비전</h3>
+            <p class="text-center">데이터를 넘어,<br>
+              비즈니스 변화를 이끄는<br>
+              윤슬의 차별화된 인사이트로<br>
+              미래를 창조합니다.</p>
           </div>
         </div>
-        <div class="slide">
-          <img src="img/slide02.jpg" alt="Slide 2">
-          <div class="slide-content">
-            <div class="custom-h1">혁신적인 솔루션 제공</div>
-            <p>고객의 비즈니스 성장을 지원합니다</p>
-          </div>
+        <div class="col-md-4">
+          <div class="about-box p-3">
+            <h3 class="text-center">미션</h3>
+            <p class="text-center">데이터의 전문성을 통해<br>
+              비즈니스 혁신을 주도하고<br>
+              고객과의 동반 성장을<br>
+              추구합니다.</p>
           </div>
         </div>
+        <div class="col-md-4">
+          <div class="about-box p-3">
+            <h3 class="text-center">가치</h3>
+            <p class="text-center">데이터의 힘을 신뢰하고<br>
+              혁신과 고객 중심의 가치로<br>
+              비즈니스 세계를<br>
+              새롭게 조명합니다.</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="products">
-      <h2>상품 정보</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="img/prod01.jpg" alt="Product 1">
-          <h3>온라인 쇼핑몰 대행</h3>
-          <p><strong>2,200,000￦~</strong>
-            <br>온라인 쇼핑몰 운영에 필요한 업무를<br>
-             데이터를 통해 효과적으로 지원합니다.</p>
-             <a href="https://naver.me/GqNo7Mb9" class="btn" onclick="openPopup(event)">상담신청</a>
+  <section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">제공 서비스</h2>
+        <div class="text-center mb-4">
+            <a href="https://kmong.com/@yunseul" target="_blank" class="btn kmong-btn">
+                <img src="img/kmong.png" alt="크몽 로고" class="kmong-logo">
+                크몽에서 보기
+            </a>
         </div>
-        <div class="product-card">
-          <img src="img/prod02.jpg" alt="Product 2">
-          <h3>디지털 마케팅 대행</h3>
-          <p><strong>1,650,000￦~</strong>
-             <br>고객이 필요한 마케팅을 분석하고<br>
-             데이터를 통해 효과적으로 진행합니다.</p>
-             <a href="https://naver.me/FVB6z1zE" class="btn" onclick="openPopup(event)">상담신청</a>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-item text-center text-white bg-dark h-100">
+                    <div class="card-header">
+                        <h3 class="h5">홈페이지 제작</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>· 랜딩 홈페이지 제작</p>
+                    </div>
+                </div>
             </div>
-        <div class="product-card">
-          <img src="img/prod03.jpg" alt="Product 3">
-          <h3>업무 효율화 컨설팅</h3>
-          <p><strong>1,100,000￦~</strong>
-           <br>업무 플로우 데이터를 통해<br>
-            효율을 200% 이상 끌어올립니다.</p>
-            <a href="https://naver.me/Gmf5kcoB" class="btn" onclick="openPopup(event)">상담신청</a>
-          </div>
-      </div>
-    </section>
+            <div class="col-md-4">
+                <div class="card service-item text-center text-white bg-dark h-100">
+                    <div class="card-header">
+                        <h3 class="h5">영상 제작/편집</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>· 유튜브 영상 편집/제작<br>· 기념일 영상 편집/제작<br>· 숏츠 영상 편집/제작</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-item text-center text-white bg-dark h-100">
+                    <div class="card-header">
+                        <h3 class="h5">디자인 제작</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>· SNS 피드 이미지 제작<br>· SNS 카드 뉴스 제작<br>· 상세 페이지 제작<br>· 사진 보정/인화/편집<br>· 온라인 배너 제작</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-item text-center text-white bg-dark h-100">
+                    <div class="card-header">
+                        <h3 class="h5">문서 제작</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>· PPT/워드/한글 문서 제작<br>· 정부지원 문서 첨삭</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-item text-center text-white bg-dark h-100">
+                    <div class="card-header">
+                        <h3 class="h5">대행 상품</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>· 온라인 쇼핑몰 대행<br>· 온라인 브랜딩 서비스<br>· 디지털 마케팅 대행</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-item text-center text-white bg-dark h-100">
+                    <div class="card-header">
+                        <h3 class="h5">컨설팅</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>· 업무 효율화 컨설팅<br>· 정부지원 컨설팅</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="about">
-      <div class="container">
-        <h2>회사 소개</h2>
-        <p>윤슬은 데이터 기술을 기반으로 혁신적인 <br>
-          솔루션을 제공하는 기업입니다.</p>
-        <div class="vision-mission-grid">
-          <div class="vision-mission-item">
-            <h3>비전</h3>
-            <p>데이터를 넘어,<br>
-               비즈니스 변화를 이끄는<br>
-               윤슬의 차별화된 인사이트로 
-               <br>미래를 창조합니다.</p>
-          </div>
-          <div class="vision-mission-item">
-            <h3>미션</h3>
-            <p>데이터의 전문성을 통해<br>
-            비즈니스 혁신을 주도하고<br>
-            고객과의 동반 성장을<br>
-            추구합니다</p>
-          </div>
-          <div class="vision-mission-item">
-            <h3>가치</h3>
-            <p>데이터의 힘을 신뢰하고<br>
-            혁신과 고객 중심의 가치로<br>
-            비즈니스 세계를<br>
-            새롭게 조명 합니다</p>
-          </div>
-        </div>
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <div class="footer-right mb-3">
+        <a href="https://litt.ly/yunseuldata" target="_blank" class="text-white me-3">채널모음</a>
+        <a href="https://www.instagram.com/s2yunseul/" target="_blank" class="text-white me-3">인스타그램</a>
+        <a href="https://blog.naver.com/yunseuldata" target="_blank" class="text-white me-3">블로그</a>
+        <a href="https://x.com/datayunseul" target="_blank" class="text-white me-3">X(트위터)</a>
+        <a href="https://www.threads.net/@s2yunseul" target="_blank" class="text-white">쓰레드</a>
       </div>
-    </section>
-
-    <section id="faq">
-      <h2>자주 묻는 질문</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <h3>Q. 서비스 이용 방법이 어떻게 되나요?</h3>
-          <div class="answer">
-            <p>A. 홈페이지의 상담 신청 버튼을 통해 문의해 주시면 담당자가 연락드립니다.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <h3>Q. 가격 정책은 어떻게 되나요?</h3>
-          <div class="answer">
-            <p>A. 홈페이지에 나와있는 정찰가를 기준으로 하며, 업무의 난이도에 따라 금액이 조정될 수 있습니다.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <h3>Q. 프로젝트 진행 절차가 궁금합니다.</h3>
-          <div class="answer">
-            <p>A. 상담 및 협의 - 전자계약 발행 - 입금 - 업무 실행 순으로 진행됩니다.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <h3>Q. 온라인 쇼핑몰 대행의 범위가 궁금합니다.</h3>
-          <div class="answer">
-            <p>A. 소싱과 배송을 제외한 모든 업무를 지원합니다. <br><bR>
-              · 상품 관리 서비스<br>
-              · 고객 관리 서비스<br>
-              · 마케팅 및 프로모션<br>
-              · UI/UX 최적화<br>
-              · 스토어 데이터 분석<br>
-              · 고객 데이터 분석<br>
-              · 데이터 기반 전략 수립
-            </p>
-          </div>
-         </div>
-         <div class="faq-item">
-          <h3>Q. 디지털 마케팅 대행의 범위가 궁금합니다.</h3>
-          <div class="answer">
-            <p>A. 인터넷 기술과 디지털 기술을 활용하여 마케팅을 지원합니다.<br><br>
-              · 콘텐츠 마케팅<br>
-              · 소셜 미디어 마케팅<br>
-              · 전문 블로그 작성<br>
-              · 검색 엔진 최적화 (SEO)<br>
-              · 체험단/기자단<br>
-              · 디스플레이 광고<br>
-              · 랜딩페이지 제작<br>
-              · KPI 분석 및 전략 수립<br></p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <h3>Q. 업무 효율화 컨설팅의 범위가 궁금합니다.</h3>
-          <div class="answer">
-            <p>A. 업무 플로우를 체크하고 자동화 처리 및 개선 방안을 지원합니다<br><br>
-              · 업무 프로세스 분석 및 개선<br>
-              · 자동화 및 디지털 변환<br>
-              · 기술 도입 및 활용<br>
-              · 개인·기업 전용 툴 제공
-          </div>
-        </div>
-        <div class="faq-item">
-          <h3>Q. 개인은 서비스 이용이 불가능한가요?</h3>
-          <div class="answer">
-            <p>A. 모든 업무는 개인도 서비스 이용이 가능합니다.
-          </div>
-        </div>
-        <div class="faq-item">
-          <h3>Q. 전자세금계산서 발행 가능한가요?</h3>
-          <div class="answer">
-            <p>A. 가능합니다. 사업자등록증과 수신받으실 이메일 송부해주시면 됩니다.
-          </div>
-        </div>
-        </div>
+      <div class="footer-left text-center">
+        <p class="mb-1">대표자 : 김윤슬 | 사업자번호 : 104-28-56019</p>
+        <p class="mb-1">서울시 서초구 사임당로8길 13, 4층 402-J41호</p>
+        <p class="mb-0">&copy; 2023 윤슬. All rights reserved.</p>
       </div>
-    </section>
-
-    <section id="contact">
-      <h2>찾아오시는 길</h2>
-      <div class="contact-info">
-        <p><strong>서울시 서초구 사임당로8길 13, 4층 402-J41호</strong></p>
-        ※방문 전 채팅 상담을 통해 미리 예약을 해주셔야 합니다※
-      </div>
-      <div class="map">
-        <!-- 지도 삽입 코드 -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.8472769121026!2d127.01564900000001!3d37.487930199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca114d43c2649%3A0x9ceb2843fcecad71!2z7ISc7Jq47Yq567OE7IucIOyEnOy0iOq1rCDsgqzsnoTri7nroZw46ri4IDEzIDTsuLUgNDAyLUo0Me2YuA!5e0!3m2!1sko!2skr!4v1711460405972!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-icons">
-        <a href="https://datayunseul.com/" target="_blank" class="icon-link">
-          <i class="fas fa-globe"></i>
-        </a>
-        <a href="https://www.instagram.com/s2yunseul/" target="_blank" class="icon-link">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <p>&copy; 2023 윤슬. All rights reserved.<br>
-        대표자 : 김윤슬 | 사업자번호 : 104-28-56019
-      </p>
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <canvas id="starfield"></canvas>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
-  <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
-<script type="text/javascript">
-if(!wcs_add) var wcs_add = {};
-wcs_add["wa"] = "9e160dab75cdf8";
-if(window.wcs) {
-  wcs_do();
-}
-</script>
 </body>
 </html>

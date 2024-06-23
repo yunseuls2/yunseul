@@ -1,76 +1,84 @@
-// 메뉴 토글
-const menuIcon = document.querySelector('.menu-icon');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinkItems = document.querySelectorAll('.nav-link');
 
-menuIcon.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+  navLinkItems.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 
-// 부드러운 스크롤 효과 추가
-const navLinkItems = document.querySelectorAll('.nav-links a'); // 변수 이름 변경
+  const productCards = document.querySelectorAll('.card');
 
-navLinkItems.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const targetId = link.getAttribute('href');
-    const targetSection = document.querySelector(targetId);
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+  productCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-10px)';
+      card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.1)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0)';
+      card.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+    });
   });
 });
 
-// FAQ 아코디언 기능 추가
-const faqItems = document.querySelectorAll('.faq-item');
+function scrollToAbout() {
+  document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
+}
 
-faqItems.forEach(item => {
-  const question = item.querySelector('h3');
-  const answer = item.querySelector('.answer');
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
 
-  question.addEventListener('click', () => {
-    item.classList.toggle('active');
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', resize);
+resize();
+
+const stars = [];
+const numStars = 200;
+
+for (let i = 0; i < numStars; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    z: Math.random() * canvas.width,
   });
-});
+}
 
-// 상품 카드 hover 효과 추가
-const productCards = document.querySelectorAll('.product-card');
+function draw() {
+  ctx.fillStyle = 'black';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-productCards.forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    card.style.transform = 'translateY(-10px)';
-    card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.1)';
-  });
+  ctx.fillStyle = 'white';
+  for (let star of stars) {
+    const x = (star.x - canvas.width / 2) * (canvas.width / star.z);
+    const y = (star.y - canvas.height / 2) * (canvas.width / star.z);
+    const radius = canvas.width / star.z / 2;
 
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'translateY(0)';
-    card.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
-  });
-});
+    ctx.beginPath();
+    ctx.arc(x + canvas.width / 2, y + canvas.height / 2, radius, 0, Math.PI * 2);
+    ctx.fill();
+  }
 
-// Owl Carousel 초기화
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true
-  });
-});
+  moveStars();
+  requestAnimationFrame(draw);
+}
 
-// 팝업 링크 기능 추가
-function openPopup(event) {
-  event.preventDefault(); // 기본 링크 동작을 방지
-  var url = event.currentTarget.href; // 현재 링크의 URL을 가져옴
-  
-  // target="_blank" 속성이 있는 경우 새 창에서 링크 열기
-  if (event.currentTarget.getAttribute('target') === '_blank') {
-    window.open(url, '_blank');
-  } else {
-    window.open(url, 'popupWindow', 'width=600,height=400,scrollbars=yes'); // 팝업 창으로 열기
+function moveStars() {
+  for (let star of stars) {
+    star.z -= 2;
+    if (star.z <= 0) {
+      star.x = Math.random() * canvas.width;
+      star.y = Math.random() * canvas.height;
+      star.z = canvas.width;
+    }
   }
 }
 
-// 팝업 링크 이벤트 리스너 추가
-const popupLinks = document.querySelectorAll('.popup-link'); // 팝업 링크 클래스
-popupLinks.forEach(link => {
-  link.addEventListener('click', openPopup);
-});
+draw();
